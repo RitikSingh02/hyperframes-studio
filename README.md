@@ -3,7 +3,7 @@
 An AI-powered video composition app built for the Soundverse internship assignment.
 
 ## Live Demo
-🌐 [Add your Vercel URL here after deployment]
+🌐 https://hyperframes-studio.vercel.app/
 
 ## What it does
 - Type a prompt describing your video
