@@ -1,5 +1,6 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {};
-
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    serverExternalPackages: ["fluent-ffmpeg", "@ffmpeg-installer/ffmpeg", "puppeteer"],
+  };
+  
+  export default nextConfig;
