@@ -121,16 +121,16 @@ export async function POST(req: NextRequest) {
 
     // Pause GSAP and scrub frame by frame
     await page.evaluate(() => {
-      // @ts-expect-error
+      // @ts-expect-error -- gsap global
       gsap.ticker.remove(gsap.updateRoot);
-      // @ts-expect-error
+      // @ts-expect-error -- gsap global
       gsap.globalTimeline.pause();
     });
 
     for (let i = 0; i < totalFrames; i++) {
       const timeSeconds = i / FRAME_RATE;
       await page.evaluate((t: number) => {
-        // @ts-expect-error
+        // @ts-expect-error -- gsap global
         gsap.globalTimeline.seek(t, false);
       }, timeSeconds);
 
